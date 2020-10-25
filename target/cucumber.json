@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-10-22T23:44:48.605Z",
+        "start_timestamp": "2020-10-25T01:29:11.320Z",
         "before": [
           {
             "result": {
-              "duration": 8743141000,
+              "duration": 5799891000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 9,
-        "name": "login with invalid or blank",
+        "line": 20,
+        "name": "Amount and Date Field should not accept letters or characters",
         "description": "",
-        "id": ";login-with-invalid-or-blank",
+        "id": "pay-bills;amount-and-date-field-should-not-accept-letters-or-characters",
         "after": [
           {
             "result": {
-              "duration": 193981000,
+              "duration": 159600000,
               "status": "passed"
             },
             "match": {
@@ -35,35 +35,85 @@
         "steps": [
           {
             "result": {
-              "duration": 1143204000,
+              "duration": 1675337000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "the user logs in with \" \" and \"asjdad\"",
+            "line": 21,
+            "name": "the user logs in",
+            "match": {
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 831508000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user clicks to \"Pay Bills\" tab",
             "match": {
               "arguments": [
                 {
-                  "val": "\" \"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"asjdad\"",
-                  "offset": 30
+                  "val": "\"Pay Bills\"",
+                  "offset": 19
                 }
               ],
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in_with_and(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.AccountActivityStepDefs.the_user_clicks_to_tab(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22278000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user should see the title as \"Zero - Pay Bills\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Zero - Pay Bills\"",
+                  "offset": 33
+                }
+              ],
+              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 119045000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user types letters or characters in \"Date\" field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Date\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.zerobank.step_definitions.PayBillsStepDefs.the_user_types_letters_or_characters_in_field(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 120018000,
+              "duration": 66677000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the user should see the error message",
+            "line": 25,
+            "name": "\"Date\" field should not accept them",
             "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_should_see_the_error_message()"
+              "arguments": [
+                {
+                  "val": "\"Date\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.zerobank.step_definitions.PayBillsStepDefs.field_should_not_accept_them(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -75,11 +125,11 @@
         ]
       }
     ],
-    "name": "",
+    "name": "Pay Bills",
     "description": "",
-    "id": "",
+    "id": "pay-bills",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/login.feature",
+    "uri": "file:src/test/resources/features/PayBills.feature",
     "tags": []
   }
 ]

@@ -1,29 +1,29 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-10-31T21:51:00.911Z",
+        "start_timestamp": "2020-10-31T23:42:30.253Z",
         "before": [
           {
             "result": {
-              "duration": 8995724000,
-              "status": "passed"
+              "duration": 3528000,
+              "status": "skipped"
             },
             "match": {
               "location": "com.zerobank.step_definitions.HOOKS.setUp()"
             }
           }
         ],
-        "line": 11,
-        "name": "Savings account redirect",
+        "line": 5,
+        "name": "Search date range",
         "description": "",
-        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect;;2",
+        "id": "find-transactions-in-account-activity;search-date-range",
         "after": [
           {
             "result": {
-              "duration": 236628000,
-              "status": "passed"
+              "duration": 82000,
+              "status": "skipped"
             },
             "match": {
               "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
@@ -31,14 +31,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1952970000,
-              "status": "passed"
+              "duration": 2805000,
+              "status": "skipped"
             },
-            "line": 5,
+            "line": 6,
             "name": "the user logs in",
             "match": {
               "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
@@ -47,471 +47,143 @@
           },
           {
             "result": {
-              "duration": 2925167000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user clicks on \"Savings\" link on the Account Summary page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Savings\"",
-                  "offset": 19
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 16215000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 7,
-            "name": "the user should see the title as \"Zero - Account Activity\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Zero - Account Activity\"",
-                  "offset": 33
-                }
-              ],
-              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 184812000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Account drop down should have \"Savings\" selected",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Savings\"",
-                  "offset": 30
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.account_drop_down_should_have_selected(java.lang.String)"
-            },
+            "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
+            "match": {},
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-31T21:51:15.525Z",
-        "before": [
-          {
-            "result": {
-              "duration": 5450756000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
-            }
-          }
-        ],
-        "line": 12,
-        "name": "Savings account redirect",
-        "description": "",
-        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect;;3",
-        "after": [
-          {
-            "result": {
-              "duration": 246835000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1994319000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user logs in",
-            "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3564146000,
-              "status": "passed"
+              "duration": 4043000,
+              "status": "skipped"
             },
-            "line": 6,
-            "name": "the user clicks on \"Brokerage\" link on the Account Summary page",
+            "line": 8,
+            "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Brokerage\"",
-                  "offset": 19
+                  "val": "\"2012-09-01\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 48
                 }
               ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 14596000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 7,
-            "name": "the user should see the title as \"Zero - Account Activity\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Zero - Account Activity\"",
-                  "offset": 33
-                }
-              ],
-              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 142617000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Account drop down should have \"Brokerage\" selected",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Brokerage\"",
-                  "offset": 30
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.account_drop_down_should_have_selected(java.lang.String)"
-            },
+            "line": 9,
+            "name": "clicks find",
+            "match": {},
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-31T21:51:26.966Z",
-        "before": [
-          {
-            "result": {
-              "duration": 5331268000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "Savings account redirect",
-        "description": "",
-        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect;;4",
-        "after": [
-          {
-            "result": {
-              "duration": 249010000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2005078000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user logs in",
-            "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3506806000,
-              "status": "passed"
+              "duration": 2389000,
+              "status": "skipped"
             },
-            "line": 6,
-            "name": "the user clicks on \"Checking\" link on the Account Summary page",
+            "line": 10,
+            "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Checking\"",
-                  "offset": 19
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 12853000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the user should see the title as \"Zero - Account Activity\"",
-            "match": {
-              "arguments": [
+                  "val": "\"2012-09-01\"",
+                  "offset": 58
+                },
                 {
-                  "val": "\"Zero - Account Activity\"",
-                  "offset": 33
+                  "val": "\"2012-09-06\"",
+                  "offset": 74
                 }
               ],
-              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 126721000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 8,
-            "name": "Account drop down should have \"Checking\" selected",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Checking\"",
-                  "offset": 30
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.account_drop_down_should_have_selected(java.lang.String)"
-            },
+            "line": 11,
+            "name": "the results should be sorted by most recent date",
+            "match": {},
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-31T21:51:38.227Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4092227000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
-            }
-          }
-        ],
-        "line": 14,
-        "name": "Savings account redirect",
-        "description": "",
-        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect;;5",
-        "after": [
-          {
-            "result": {
-              "duration": 207498000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 5902367000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user logs in",
-            "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3594565000,
-              "status": "passed"
+              "duration": 1408000,
+              "status": "skipped"
             },
-            "line": 6,
-            "name": "the user clicks on \"Credit Card\" link on the Account Summary page",
+            "line": 12,
+            "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Credit Card\"",
-                  "offset": 19
+                  "val": "\"2012-09-02\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 48
                 }
               ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 11858000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 7,
-            "name": "the user should see the title as \"Zero - Account Activity\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Zero - Account Activity\"",
-                  "offset": 33
-                }
-              ],
-              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 148497000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Account drop down should have \"Credit Card\" selected",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Credit Card\"",
-                  "offset": 30
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.account_drop_down_should_have_selected(java.lang.String)"
-            },
+            "line": 13,
+            "name": "clicks find",
+            "match": {},
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@wip"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-10-31T21:51:52.206Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4066359000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "Savings account redirect",
-        "description": "",
-        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect;;6",
-        "after": [
-          {
-            "result": {
-              "duration": 243875000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1843184000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user logs in",
-            "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2849565000,
-              "status": "passed"
+              "duration": 1091000,
+              "status": "skipped"
             },
-            "line": 6,
-            "name": "the user clicks on \"Loan\" link on the Account Summary page",
+            "line": 14,
+            "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Loan\"",
-                  "offset": 19
-                }
-              ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.the_user_clicks_on_link_on_the_Account_Summary_page(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 9707000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the user should see the title as \"Zero - Account Activity\"",
-            "match": {
-              "arguments": [
+                  "val": "\"2012-09-02\"",
+                  "offset": 58
+                },
                 {
-                  "val": "\"Zero - Account Activity\"",
-                  "offset": 33
+                  "val": "\"2012-09-06\"",
+                  "offset": 74
                 }
               ],
-              "location": "com.zerobank.step_definitions.AccountSummaryStepDefs.the_user_should_see_the_title_as(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 107095000,
-              "status": "passed"
+              "duration": 958000,
+              "status": "skipped"
             },
-            "line": 8,
-            "name": "Account drop down should have \"Loan\" selected",
+            "line": 15,
+            "name": "the results table should only not contain transactions dated \"2012-09-01\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Loan\"",
-                  "offset": 30
+                  "val": "\"2012-09-01\"",
+                  "offset": 61
                 }
               ],
-              "location": "com.zerobank.step_definitions.accountActivityNavigationStepDefs.account_drop_down_should_have_selected(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_results_table_should_only_not_contain_transactions_dated(java.lang.String)"
             },
             "keyword": "And "
           }
@@ -523,11 +195,11 @@
         ]
       }
     ],
-    "name": "Navigating to specific accounts in Accounts Activity",
+    "name": "Find Transactions in Account Activity",
     "description": "",
-    "id": "navigating-to-specific-accounts-in-accounts-activity",
+    "id": "find-transactions-in-account-activity",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/accountActivitiyNavigation.feature",
+    "uri": "file:src/test/resources/features/findTransactions.feature",
     "tags": []
   }
 ]

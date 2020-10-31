@@ -16,4 +16,8 @@ public class BasePage {
         BrowserUtils.waitFor(1);
         Driver.get().findElement(By.xpath("//a[contains(text(),'"+module+"')]")).click();
     }
+    public void navigateTo(String tab){
+        Driver.get().findElement(By.xpath("//a[contains(text(),'"+tab+"')]")).click();
+        BrowserUtils.waitFor(1);
+    }
 }

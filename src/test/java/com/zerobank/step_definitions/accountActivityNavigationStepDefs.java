@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 public class accountActivityNavigationStepDefs {
 
     @When("the user clicks on {string} link on the Account Summary page")
-    public void the_user_clicks_on_link_on_the_Account_Summary_page(String accountType) {
-        Driver.get().findElement(By.xpath("//a[contains(text(),'"+accountType+"')]")).click();
+    public void the_user_clicks_on_link_on_the_Account_Summary_page(String type) {
+        Driver.get().findElement(By.xpath("//a[contains(text(),'"+type+"')]")).click();
         BrowserUtils.waitFor(2);
     }
 

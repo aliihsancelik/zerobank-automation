@@ -20,4 +20,5 @@ public class BasePage {
         Driver.get().findElement(By.xpath("//a[contains(text(),'"+tab+"')]")).click();
         BrowserUtils.waitFor(1);
     }
+
 }

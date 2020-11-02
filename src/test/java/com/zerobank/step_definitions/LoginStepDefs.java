@@ -1,6 +1,7 @@
 package com.zerobank.step_definitions;
 
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Then;
@@ -13,6 +14,7 @@ public class LoginStepDefs {
 
     @When("the user logs in")
     public void the_user_logs_in() {
+        BrowserUtils.waitFor(1);
         new LoginPage().login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
     }
 

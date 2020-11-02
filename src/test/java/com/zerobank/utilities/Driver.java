@@ -20,7 +20,7 @@ public class Driver {
     // driver class will provide separate webdriver object per thread
     //we also put parallel and useUnlimitedThreads in plugins in pom.
     //it is opening one browser for each feature file that has the tag you wanna run,if there is more than one tag-
-    //-in the same feature file those tags will be in same browser, it will not open new browser for them.
+    //-in the same feature file those tags will be in same browser, it won't open new browser for them.
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
     public static WebDriver get() {
         //if this thread doesn't have driver - create it and add to pool

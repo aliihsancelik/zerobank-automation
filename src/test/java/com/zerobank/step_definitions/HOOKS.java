@@ -37,6 +37,7 @@ public class HOOKS {
     public void setUpDatabase(){
         System.out.println("\tconnecting to database");
         System.out.println("\tconnecting to database");
+        System.out.println("\tconnecting to database");
     }
     @After(value = "@database", order = 1 ) //custom after: the scenario you put @database before, it runs after
     public void tearDownDatabase(){

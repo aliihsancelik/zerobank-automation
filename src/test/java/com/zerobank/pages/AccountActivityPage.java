@@ -13,4 +13,7 @@ public class AccountActivityPage extends BasePage{
 
     @FindBy(xpath = "//button[contains(text(),'Find')]")
     public WebElement findButton;
+
+    @FindBy(css = "#aa_description")
+    public WebElement descriptionInput;
 }

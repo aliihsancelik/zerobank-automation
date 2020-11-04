@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-01T01:00:40.992Z",
+        "start_timestamp": "2020-11-04T13:07:18.454Z",
         "before": [
           {
             "result": {
-              "duration": 11723631000,
+              "duration": 13343715000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Search date range",
+        "line": 25,
+        "name": "Search \"ONLINE\"",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-date-range",
+        "id": "find-transactions-in-account-activity;search-\"\u003cdescriptions\u003e\";;2",
         "after": [
           {
             "result": {
-              "duration": 382465000,
+              "duration": 227572000,
               "status": "passed"
             },
             "match": {
@@ -31,14 +31,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4449157000,
+              "duration": 5248086000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 18,
             "name": "the user logs in",
             "match": {
               "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 2644114000,
+              "duration": 4858718000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 19,
             "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
             "match": {
               "arguments": [
@@ -65,149 +65,175 @@
               ],
               "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 913136000,
+              "duration": 644672000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
+            "line": 20,
+            "name": "the user enters \"ONLINE\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-01\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
+                  "val": "\"ONLINE\"",
+                  "offset": 16
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4846000,
+              "duration": 169358000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "clicks find",
+            "line": 21,
+            "name": "clicks search",
             "match": {
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_find()"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 264908000,
+              "duration": 468636000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
+            "line": 22,
+            "name": "results table should only show descriptions containing \"ONLINE\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-01\"",
-                  "offset": 58
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 74
+                  "val": "\"ONLINE\"",
+                  "offset": 55
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
             },
             "keyword": "Then "
-          },
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-04T13:07:43.831Z",
+        "before": [
           {
             "result": {
-              "duration": 1737000,
+              "duration": 5045120000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the results should be sorted by most recent date",
             "match": {
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_results_should_be_sorted_by_most_recent_date()"
+              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Search \"OFFICE\"",
+        "description": "",
+        "id": "find-transactions-in-account-activity;search-\"\u003cdescriptions\u003e\";;3",
+        "after": [
+          {
+            "result": {
+              "duration": 202018000,
+              "status": "passed"
             },
-            "keyword": "And "
+            "match": {
+              "location": "com.zerobank.step_definitions.HOOKS.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4250314000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user logs in",
+            "match": {
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
+            },
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 694854000,
+              "duration": 3128754000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
+            "line": 19,
+            "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-02\"",
-                  "offset": 32
+                  "val": "\"Account Activity\"",
+                  "offset": 22
                 },
                 {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
+                  "val": "\"Find Transactions\"",
+                  "offset": 49
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 401992000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user enters \"OFFICE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OFFICE\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 630000,
+              "duration": 130978000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "clicks find",
+            "line": 21,
+            "name": "clicks search",
             "match": {
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_find()"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 77652000,
+              "duration": 450556000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
+            "line": 22,
+            "name": "results table should only show descriptions containing \"OFFICE\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-02\"",
-                  "offset": 58
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 74
+                  "val": "\"OFFICE\"",
+                  "offset": 55
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1187000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "the results table should only not contain transactions dated \"2012-09-01\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 61
-                }
-              ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_results_table_should_only_not_contain_transactions_dated(java.lang.String)"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [

@@ -16,4 +16,7 @@ public class AccountActivityPage extends BasePage{
 
     @FindBy(css = "#aa_description")
     public WebElement descriptionInput;
+
+    @FindBy(xpath = "//select[@id='aa_type']")
+    public WebElement typeDropDown;
 }

@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Search \"\u003cdescriptions\u003e\"",
+  "name": "Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -20,10 +20,18 @@ formatter.step({
 });
 formatter.step({
   "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
-  "keyword": "Given "
+  "keyword": "And "
 });
 formatter.step({
-  "name": "the user enters \"\u003cdescriptions\u003e\"",
+  "name": "clicks search",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "results table should show at least one result under \"\u003ccolumn1\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects type \"\u003ccolumn1\u003e\"",
   "keyword": "When "
 });
 formatter.step({
@@ -31,8 +39,12 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "results table should only show descriptions containing \"\u003cdescriptions\u003e\"",
+  "name": "results table should show at least one result under \"\u003ccolumn1\u003e\"",
   "keyword": "Then "
+});
+formatter.step({
+  "name": "results table should show no result under \"\u003ccolumn2\u003e\"",
+  "keyword": "But "
 });
 formatter.examples({
   "name": "",
@@ -41,23 +53,26 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "descriptions"
+        "column1",
+        "column2"
       ]
     },
     {
       "cells": [
-        "ONLINE"
+        "Deposit",
+        "Withdrawal"
       ]
     },
     {
       "cells": [
-        "OFFICE"
+        "Withdrawal",
+        "Deposit"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Search \"ONLINE\"",
+  "name": "Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -81,20 +96,10 @@ formatter.result({
 });
 formatter.step({
   "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
-  "keyword": "Given "
+  "keyword": "And "
 });
 formatter.match({
   "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user enters \"ONLINE\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -110,11 +115,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "results table should only show descriptions containing \"ONLINE\"",
+  "name": "results table should show at least one result under \"Deposit\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects type \"Deposit\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.user_selects_type(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks search",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "results table should show at least one result under \"Deposit\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "results table should show no result under \"Withdrawal\"",
+  "keyword": "But "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_no_result_under(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -123,7 +168,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Search \"OFFICE\"",
+  "name": "Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -147,20 +192,10 @@ formatter.result({
 });
 formatter.step({
   "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
-  "keyword": "Given "
+  "keyword": "And "
 });
 formatter.match({
   "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user enters \"OFFICE\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -176,11 +211,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "results table should only show descriptions containing \"OFFICE\"",
+  "name": "results table should show at least one result under \"Withdrawal\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects type \"Withdrawal\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.user_selects_type(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks search",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "results table should show at least one result under \"Withdrawal\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "results table should show no result under \"Deposit\"",
+  "keyword": "But "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_no_result_under(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-04T13:07:18.454Z",
+        "start_timestamp": "2020-11-05T22:17:10.989Z",
         "before": [
           {
             "result": {
-              "duration": 13343715000,
+              "duration": 8643622000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 25,
-        "name": "Search \"ONLINE\"",
+        "line": 43,
+        "name": "Type",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-\"\u003cdescriptions\u003e\";;2",
+        "id": "find-transactions-in-account-activity;type;;2",
         "after": [
           {
             "result": {
-              "duration": 227572000,
+              "duration": 246798000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5248086000,
+              "duration": 3191331000,
               "status": "passed"
             },
-            "line": 18,
+            "line": 31,
             "name": "the user logs in",
             "match": {
               "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 4858718000,
+              "duration": 3272972000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 32,
             "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
             "match": {
               "arguments": [
@@ -65,32 +65,14 @@
               ],
               "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
             },
-            "keyword": "Given "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 644672000,
+              "duration": 2229785000,
               "status": "passed"
             },
-            "line": 20,
-            "name": "the user enters \"ONLINE\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"ONLINE\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 169358000,
-              "status": "passed"
-            },
-            "line": 21,
+            "line": 33,
             "name": "clicks search",
             "match": {
               "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
@@ -99,21 +81,87 @@
           },
           {
             "result": {
-              "duration": 468636000,
+              "duration": 93025000,
               "status": "passed"
             },
-            "line": 22,
-            "name": "results table should only show descriptions containing \"ONLINE\"",
+            "line": 34,
+            "name": "results table should show at least one result under \"Deposit\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"ONLINE\"",
-                  "offset": 55
+                  "val": "\"Deposit\"",
+                  "offset": 52
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2177372000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user selects type \"Deposit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Deposit\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.user_selects_type(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2068659000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "clicks search",
+            "match": {
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55744000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "results table should show at least one result under \"Deposit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Deposit\"",
+                  "offset": 52
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61095000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "results table should show no result under \"Withdrawal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_no_result_under(java.lang.String)"
+            },
+            "keyword": "But "
           }
         ],
         "tags": [
@@ -123,11 +171,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-11-04T13:07:43.831Z",
+        "start_timestamp": "2020-11-05T22:17:33.375Z",
         "before": [
           {
             "result": {
-              "duration": 5045120000,
+              "duration": 5897914000,
               "status": "passed"
             },
             "match": {
@@ -135,14 +183,14 @@
             }
           }
         ],
-        "line": 26,
-        "name": "Search \"OFFICE\"",
+        "line": 44,
+        "name": "Type",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-\"\u003cdescriptions\u003e\";;3",
+        "id": "find-transactions-in-account-activity;type;;3",
         "after": [
           {
             "result": {
-              "duration": 202018000,
+              "duration": 272149000,
               "status": "passed"
             },
             "match": {
@@ -155,10 +203,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4250314000,
+              "duration": 3152957000,
               "status": "passed"
             },
-            "line": 18,
+            "line": 31,
             "name": "the user logs in",
             "match": {
               "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
@@ -167,10 +215,10 @@
           },
           {
             "result": {
-              "duration": 3128754000,
+              "duration": 2538744000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 32,
             "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
             "match": {
               "arguments": [
@@ -185,32 +233,14 @@
               ],
               "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
             },
-            "keyword": "Given "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 401992000,
+              "duration": 2278868000,
               "status": "passed"
             },
-            "line": 20,
-            "name": "the user enters \"OFFICE\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"OFFICE\"",
-                  "offset": 16
-                }
-              ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 130978000,
-              "status": "passed"
-            },
-            "line": 21,
+            "line": 33,
             "name": "clicks search",
             "match": {
               "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
@@ -219,21 +249,87 @@
           },
           {
             "result": {
-              "duration": 450556000,
+              "duration": 83221000,
               "status": "passed"
             },
-            "line": 22,
-            "name": "results table should only show descriptions containing \"OFFICE\"",
+            "line": 34,
+            "name": "results table should show at least one result under \"Withdrawal\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"OFFICE\"",
-                  "offset": 55
+                  "val": "\"Withdrawal\"",
+                  "offset": 52
                 }
               ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2162221000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user selects type \"Withdrawal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.user_selects_type(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2065969000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "clicks search",
+            "match": {
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.clicks_search()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35257000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "results table should show at least one result under \"Withdrawal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 52
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_at_least_one_result_under(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30919000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "results table should show no result under \"Deposit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Deposit\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_show_no_result_under(java.lang.String)"
+            },
+            "keyword": "But "
           }
         ],
         "tags": [

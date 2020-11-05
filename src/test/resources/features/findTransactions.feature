@@ -26,7 +26,7 @@ Feature: Find Transactions in Account Activity
       | OFFICE       |
       | online       |
 
-  @wip
+
   Scenario Outline: Type
     Given the user logs in
     And the user navigates to "Account Activity" tab and "Find Transactions" module

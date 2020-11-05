@@ -40,7 +40,7 @@ public class findTransactionsStepDefs {
 
     @Then("the results table should only not contain transactions dated {string}")
     public void the_results_table_should_only_not_contain_transactions_dated(String string) {
-        System.out.println();
+
     }
 
     @Given("the user navigates to {string} tab and {string} module")

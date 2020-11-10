@@ -1,4 +1,5 @@
 
+@wip
 Feature: Purchase Foreign Currency
   Scenario: Available currencies
     Given the user accesses the Purchase foreign currency cash tab

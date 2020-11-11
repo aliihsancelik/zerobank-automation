@@ -38,6 +38,6 @@ Feature: Purchase Foreign Currency
   Scenario: Success message should display
     When user put an amount and select a currency then success message should display
 
-  @wip
+
   Scenario: Conversion amount should display
     When user put an amount and select a currency then conversion amount should display

@@ -5,8 +5,6 @@ import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
@@ -17,7 +15,6 @@ import java.util.List;
 
 public class PurchaseForeignCurrencyStepDefs {
 
-    static final Logger logger = LogManager.getLogger(PurchaseForeignCurrencyStepDefs.class);
 
     @Then("following currencies should be available")
     public void following_currencies_should_be_available(List<String> expectedCurrencies) {
@@ -113,7 +110,6 @@ public class PurchaseForeignCurrencyStepDefs {
             payBillPage.calculatecostBtn.click();
             BrowserUtils.waitFor(1);
             String s = stringDropdown.get(i).substring(stringDropdown.get(i).indexOf('(')+1 , stringDropdown.get(i).indexOf(')'));
-            logger.info(s);
             System.out.println(s);
             Assert.assertTrue(payBillPage.conversionAmount.getText().contains(s));
             BrowserUtils.waitFor(1);

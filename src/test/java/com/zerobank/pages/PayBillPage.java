@@ -24,5 +24,29 @@ public class PayBillPage extends BasePage {
     public WebElement successMessage;
 
 
+    @FindBy(css = "#pc_currency")
+    public WebElement currencySelectDropDwn;
+
+    @FindBy(css = "#pc_amount")
+    public WebElement inputAmount;
+    @FindBy(css="#pc_inDollars_true")
+    public  WebElement DollarButton  ;
+    @FindBy ( css="#pc_inDollars_false")
+    public WebElement SelectedCurrency;
+    @FindBy (css="#purchase_cash")
+    public  WebElement purchaseButton;
+
+    @FindBy (css="#pc_calculate_costs")
+    public WebElement calculatecostBtn;
+    @FindBy (css="#pc_conversion_amount")
+    public WebElement displayedMessage;
+
+    @FindBy (xpath = "//div[contains(text(),'successfully purchased')]")
+    public WebElement purchaseSuccessMessage;
+
+    @FindBy(css = "#pc_conversion_amount")
+    public WebElement conversionAmount;
+
+
 
 }

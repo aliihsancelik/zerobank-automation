@@ -1,28 +1,71 @@
 [
   {
-    "line": 2,
+    "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-11-05T23:15:31.656Z",
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12068384000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user logs in",
+            "match": {
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2351148000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user navigates to \"Pay Bills\" tab and \"Purchase Foreign Currency\" module",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay Bills\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Purchase Foreign Currency\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-11T00:33:11.167Z",
         "before": [
           {
             "result": {
-              "duration": 7239197000,
+              "duration": 15330401000,
               "status": "passed"
             },
             "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
+              "location": "com.zerobank.step_definitions.HOOKS.setUp(io.cucumber.java.Scenario)"
             }
           }
         ],
-        "line": 4,
-        "name": "Add a new payee",
+        "line": 42,
+        "name": "Conversion amount should display",
         "description": "",
-        "id": "add-new-payee-under-pay-bills;add-a-new-payee",
+        "id": "purchase-foreign-currency;conversion-amount-should-display",
         "after": [
           {
             "result": {
-              "duration": 231377000,
+              "duration": 306262000,
               "status": "passed"
             },
             "match": {
@@ -35,87 +78,15 @@
         "steps": [
           {
             "result": {
-              "duration": 3787959000,
+              "duration": 55291331000,
               "status": "passed"
             },
-            "line": 5,
-            "name": "the user logs in",
+            "line": 43,
+            "name": "user put an amount and select a currency then conversion amount should display",
             "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
+              "location": "com.zerobank.step_definitions.PurchaseForeignCurrencyStepDefs.user_put_an_amount_and_select_a_currency_then_conversion_amount_should_display()"
             },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2707494000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user navigates to \"Pay Bills\" tab and \"Add New Payee\" module",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pay Bills\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Add New Payee\"",
-                  "offset": 42
-                }
-              ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2577443000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the user adds a new payee using following informations",
-            "match": {
-              "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_adds_a_new_payee_using_following_informations(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Payee Name",
-                  "The Law Offices of Hyde, Price \u0026 Scharks"
-                ]
-              },
-              {
-                "cells": [
-                  "Payee Address",
-                  "100 Same st, Anytown, USA, 10001"
-                ]
-              },
-              {
-                "cells": [
-                  "Account",
-                  "Checking"
-                ]
-              },
-              {
-                "cells": [
-                  "Payee details",
-                  "XYZ account"
-                ]
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2107092000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "the user should add a new payee successfully",
-            "match": {
-              "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_should_add_a_new_payee_successfully()"
-            },
-            "keyword": "And "
+            "keyword": "When "
           }
         ],
         "tags": [
@@ -125,20 +96,11 @@
         ]
       }
     ],
-    "name": "Add new payee under pay bills",
+    "name": "Purchase Foreign Currency",
     "description": "",
-    "id": "add-new-payee-under-pay-bills",
+    "id": "purchase-foreign-currency",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/newPayee.feature",
-    "tags": [
-      {
-        "name": "@wip",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
+    "tags": []
   }
 ]

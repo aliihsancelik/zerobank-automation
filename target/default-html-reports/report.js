@@ -1,23 +1,13 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/newPayee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/PurchaseForeignCurrency.feature");
 formatter.feature({
-  "name": "Add new payee under pay bills",
+  "name": "Purchase Foreign Currency",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
+  "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Add a new payee",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@wip"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -33,8 +23,8 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user navigates to \"Pay Bills\" tab and \"Add New Payee\" module",
-  "keyword": "And "
+  "name": "the user navigates to \"Pay Bills\" tab and \"Purchase Foreign Currency\" module",
+  "keyword": "Given "
 });
 formatter.match({
   "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
@@ -42,28 +32,22 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "the user adds a new payee using following informations",
-  "rows": [
-    {},
-    {},
-    {},
-    {}
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_adds_a_new_payee_using_following_informations(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
-});
-formatter.result({
-  "status": "passed"
+formatter.scenario({
+  "name": "Conversion amount should display",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
 });
 formatter.step({
-  "name": "the user should add a new payee successfully",
-  "keyword": "And "
+  "name": "user put an amount and select a currency then conversion amount should display",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_should_add_a_new_payee_successfully()"
+  "location": "com.zerobank.step_definitions.PurchaseForeignCurrencyStepDefs.user_put_an_amount_and_select_a_currency_then_conversion_amount_should_display()"
 });
 formatter.result({
   "status": "passed"

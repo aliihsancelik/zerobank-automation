@@ -21,4 +21,9 @@ public class BasePage {
         BrowserUtils.waitFor(1);
     }
 
+    public void navigateToModule(String module){
+        Driver.get().findElement(By.xpath("//a[contains(text(),'"+module+"')]")).click();
+        BrowserUtils.waitFor(1);
+    }
+
 }

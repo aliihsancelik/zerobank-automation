@@ -1,5 +1,5 @@
 
-@wip
+@smoke
 Feature:
 
 

@@ -1,6 +1,6 @@
 Feature: Find Transactions in Account Activity
 
-@smoke
+
   Scenario: Search date range
     Given the user logs in
     And the user navigates to "Account Activity" tab and "Find Transactions" module

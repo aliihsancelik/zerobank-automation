@@ -1,53 +1,46 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/PurchaseForeignCurrency.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
 formatter.feature({
-  "name": "Purchase Foreign Currency",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.background({
   "name": "",
   "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user logs in",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "the user navigates to \"Pay Bills\" tab and \"Purchase Foreign Currency\" module",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@smoke"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Conversion amount should display",
+  "name": "login with invalid or blank",
   "description": "",
   "keyword": "Scenario",
   "tags": [
+    {
+      "name": "@smoke"
+    },
     {
       "name": "@wip"
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
-  "name": "user put an amount and select a currency then conversion amount should display",
+  "name": "the user logs in with \" \" and \"asjdad\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.PurchaseForeignCurrencyStepDefs.user_put_an_amount_and_select_a_currency_then_conversion_amount_should_display()"
+  "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in_with_and(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should NOT be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_should_NOT_be_able_to_login()"
 });
 formatter.result({
   "status": "passed"

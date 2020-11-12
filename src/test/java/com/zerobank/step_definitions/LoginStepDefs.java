@@ -20,7 +20,14 @@ public class LoginStepDefs {
 
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() {
+        BrowserUtils.waitFor(1);
         Assert.assertTrue(Driver.get().getTitle().contains("Summary"));
+    }
+
+    @Then("the user should NOT be able to login")
+    public void the_user_should_NOT_be_able_to_login() {
+        BrowserUtils.waitFor(1);
+        Assert.assertFalse(Driver.get().getTitle().contains("Summary"));
     }
 
     @When("the user logs in with {string} and {string}")

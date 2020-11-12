@@ -1,71 +1,28 @@
 [
   {
-    "line": 4,
+    "line": 3,
     "elements": [
       {
-        "line": 7,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 2725722000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "the user logs in",
-            "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2002242000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "the user navigates to \"Pay Bills\" tab and \"Purchase Foreign Currency\" module",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pay Bills\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Purchase Foreign Currency\"",
-                  "offset": 42
-                }
-              ],
-              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-11-11T00:44:07.774Z",
+        "start_timestamp": "2020-11-12T01:16:33.182Z",
         "before": [
           {
             "result": {
-              "duration": 10237903000,
+              "duration": 4354671000,
               "status": "passed"
             },
             "match": {
-              "location": "com.zerobank.step_definitions.HOOKS.setUp(io.cucumber.java.Scenario)"
+              "location": "com.zerobank.step_definitions.HOOKS.setUp()"
             }
           }
         ],
-        "line": 42,
-        "name": "Conversion amount should display",
+        "line": 11,
+        "name": "login with invalid or blank",
         "description": "",
-        "id": "purchase-foreign-currency;conversion-amount-should-display",
+        "id": ";login-with-invalid-or-blank",
         "after": [
           {
             "result": {
-              "duration": 132616000,
+              "duration": 153793000,
               "status": "passed"
             },
             "match": {
@@ -78,29 +35,63 @@
         "steps": [
           {
             "result": {
-              "duration": 51516167000,
+              "duration": 905092000,
               "status": "passed"
             },
-            "line": 43,
-            "name": "user put an amount and select a currency then conversion amount should display",
+            "line": 12,
+            "name": "the user logs in with \" \" and \"asjdad\"",
             "match": {
-              "location": "com.zerobank.step_definitions.PurchaseForeignCurrencyStepDefs.user_put_an_amount_and_select_a_currency_then_conversion_amount_should_display()"
+              "arguments": [
+                {
+                  "val": "\" \"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"asjdad\"",
+                  "offset": 30
+                }
+              ],
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in_with_and(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1020516000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user should NOT be able to login",
+            "match": {
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_should_NOT_be_able_to_login()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
+          {
+            "name": "@smoke"
+          },
           {
             "name": "@wip"
           }
         ]
       }
     ],
-    "name": "Purchase Foreign Currency",
+    "name": "",
     "description": "",
-    "id": "purchase-foreign-currency",
+    "id": "",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": [
+      {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

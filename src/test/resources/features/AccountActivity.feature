@@ -1,6 +1,6 @@
 Feature: Account Activity
 
-@smoke
+
   Scenario: Account Activity Page
     Given the user logs in
     When the user clicks to "Account Activity" tab

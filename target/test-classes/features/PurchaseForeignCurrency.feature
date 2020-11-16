@@ -32,7 +32,7 @@ Feature: Purchase Foreign Currency
 
   Scenario: Error message for not entering value
     When user tries to calculate cost without entering a value
-    #Then error message should be displayed(we put the assertion in previous step!)
+    #Then error message should be displayed (we put the assertion in previous step!)
 
 
   Scenario: Success message should display

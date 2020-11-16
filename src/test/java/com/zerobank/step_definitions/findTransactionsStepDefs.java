@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class findTransactionsStepDefs {
@@ -29,34 +30,24 @@ public class findTransactionsStepDefs {
 
     @Then("results table should only show transactions dates between {string} to {string}")
     public void results_table_should_only_show_transactions_dates_between_to(String resultMin, String resultMax) {
+        BrowserUtils.waitFor(2);
         List<WebElement> dates = Driver.get().findElements(By.xpath("//div[@id='filtered_transactions_for_account']//table//tbody//tr//td[1]"));
         List<String> datesTexts = BrowserUtils.getElementsText(dates);
+        List<Integer> datesInt = new ArrayList<>();
         for (String datesText : datesTexts) {
             String s = datesText.replace("-","");
             System.out.println(s);
+            datesInt.add(Integer.parseInt(s));
         }
+        Assert.assertTrue(datesInt.get(0)<=Integer.parseInt(resultMax.replace("-","")));
+        Assert.assertTrue(datesInt.get(datesInt.size()-1)>=Integer.parseInt(resultMin.replace("-","")));
 
     }
 
-    @Then("the results table should only not contain transactions dated {string}")
-    public void the_results_table_should_only_not_contain_transactions_dated(String string) {
-
-    }
 
     @Given("the user navigates to {string} tab and {string} module")
     public void the_user_navigates_to_tab_and_module(String tab, String module) {
        new BasePage().navigateTo(tab,module);
-    }
-
-
-    @When("clicks find")
-    public void clicks_find() {
-
-    }
-
-    @Then("the results should be sorted by most recent date")
-    public void the_results_should_be_sorted_by_most_recent_date() {
-
     }
 
 

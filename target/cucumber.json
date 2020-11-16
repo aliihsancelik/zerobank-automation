@@ -1,13 +1,13 @@
 [
   {
-    "line": 3,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-12T01:16:33.182Z",
+        "start_timestamp": "2020-11-16T14:28:56.280Z",
         "before": [
           {
             "result": {
-              "duration": 4354671000,
+              "duration": 8210047000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 11,
-        "name": "login with invalid or blank",
+        "line": 4,
+        "name": "Search date range",
         "description": "",
-        "id": ";login-with-invalid-or-blank",
+        "id": "find-transactions-in-account-activity;search-date-range",
         "after": [
           {
             "result": {
-              "duration": 153793000,
+              "duration": 224295000,
               "status": "passed"
             },
             "match": {
@@ -35,63 +35,139 @@
         "steps": [
           {
             "result": {
-              "duration": 905092000,
+              "duration": 3245643000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "the user logs in with \" \" and \"asjdad\"",
+            "line": 5,
+            "name": "the user logs in",
+            "match": {
+              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2928975000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
             "match": {
               "arguments": [
                 {
-                  "val": "\" \"",
+                  "val": "\"Account Activity\"",
                   "offset": 22
                 },
                 {
-                  "val": "\"asjdad\"",
-                  "offset": 30
+                  "val": "\"Find Transactions\"",
+                  "offset": 49
                 }
               ],
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_logs_in_with_and(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_navigates_to_tab_and_module(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 863475000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2012-09-01\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1020516000,
+              "duration": 2123639000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "the user should NOT be able to login",
+            "line": 8,
+            "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
             "match": {
-              "location": "com.zerobank.step_definitions.LoginStepDefs.the_user_should_NOT_be_able_to_login()"
+              "arguments": [
+                {
+                  "val": "\"2012-09-01\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 74
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 776814000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2012-09-02\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2058854000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2012-09-02\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"2012-09-06\"",
+                  "offset": 74
+                }
+              ],
+              "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
-          },
-          {
             "name": "@wip"
           }
         ]
       }
     ],
-    "name": "",
+    "name": "Find Transactions in Account Activity",
     "description": "",
-    "id": "",
+    "id": "find-transactions-in-account-activity",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/login.feature",
-    "tags": [
-      {
-        "name": "@smoke",
-        "type": "Tag",
-        "location": {
-          "line": 2,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/findTransactions.feature",
+    "tags": []
   }
 ]

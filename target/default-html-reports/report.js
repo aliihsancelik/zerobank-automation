@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/findTransactions.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/newPayee.feature");
 formatter.feature({
-  "name": "Find Transactions in Account Activity",
+  "name": "Add new payee under pay bills",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Search date range",
+  "name": "Add a new payee",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -28,7 +28,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user navigates to \"Account Activity\" tab and \"Find Transactions\" module",
+  "name": "the user navigates to \"Pay Bills\" tab and \"Add New Payee\" module",
   "keyword": "And "
 });
 formatter.match({
@@ -38,41 +38,27 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
+  "name": "the user adds a new payee using following informations",
+  "rows": [
+    {},
+    {},
+    {},
+    {}
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_adds_a_new_payee_using_following_informations(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
-  "keyword": "When "
+  "name": "the user should add a new payee successfully",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.findTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.newPayeeStepDefs.the_user_should_add_a_new_payee_successfully()"
 });
 formatter.result({
   "status": "passed"
